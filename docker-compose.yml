@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    container_name: schooloflaw_helper
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./data:/app/data
+      - ./templates:/app/templates:ro
+      - ./src:/app/src:ro

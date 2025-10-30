@@ -1,10 +1,10 @@
 ## LawHelp International — Telegram бот + Админка
 
 ### Требования
-- Python 3.10+
+- Python 3.10+ или Docker / Docker Compose
 - Telegram Bot Token (BotFather)
 
-### Установка
+### Установка (без Docker)
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -17,38 +17,36 @@ BOT_TOKEN=xxxxxxxx:yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
 ADMIN_PASSWORD=admin
 ```
 
-### Запуск
-- Единый запуск (бот + админка):
+### Запуск (без Docker)
+Единый запуск (бот + админка):
 ```powershell
 python -m src.run_all
 ```
-- Админка доступна на: http://192.168.1.59:8001/ (локальная сеть)
-- Бот запускается в том же процессе (aiogram polling)
+- Админка слушает на 0.0.0.0:8001 → http://<ВАШ_IP>:8001/
 
-Альтернативно по отдельности:
-```powershell
-python -m src.main
-uvicorn src.admin.app:app --reload  # http://127.0.0.1:8000/
+### Запуск в Docker
+Собрать и запустить:
+```bash
+docker compose up --build -d
+```
+- Контейнер: `schooloflaw_helper`
+- Порт: 8001 (проброшен на хост)
+- Окружение: из `.env` (BOT_TOKEN, ADMIN_PASSWORD)
+- Данные: `./data` монтируются внутрь контейнера `/app/data`
+
+Остановить:
+```bash
+docker compose down
 ```
 
 ### Структура
 - `src/main.py` — Telegram-бот (aiogram)
 - `src/admin/app.py` — админка (FastAPI + Jinja2)
-- `src/run_all.py` — общий запуск
+- `src/run_all.py` — общий запуск (бот + админка на 0.0.0.0:8001)
 - `templates/` — шаблоны админки (`base`, `login`, `admin_home`)
-- `data/terms.json`, `data/tips.json`, `data/documents.json` — контент
-- `data/cards/` — карточки для «Кодекса мнемоники» и `index.json`
-
-### Админка
-- Вход: `admin / ADMIN_PASSWORD`
-- CRUD: Термины, Советы, Документы, Карточки (загрузка изображений и подписи)
-- Логи действий: `data/admin/audit.jsonl`
-
-### Git ignore (важно)
-- `.env`, виртуальное окружение, `__pycache__`, логи
-- `data/admin/*` (пользователи и журнал действий)
-- одноразовые скрипты и временные файлы
+- `data/*.json` — контент (термины, советы, документы)
+- `data/cards/` — карточки и `index.json`
 
 ### Примечания
-- Если порт 8001 занят — измените `src/run_all.py` (host/port) или освободите порт в фаерволе.
-- Для доступа из сети используется `192.168.1.59:8001` — при смене IP обновите `run_all.py`.
+- Если 8001 занят — измените порт в `docker-compose.yml` и/или `src/run_all.py`.
+- Для внешнего доступа используйте адрес хоста: `http://<IP_ХОСТА>:8001/`.

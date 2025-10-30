@@ -19,7 +19,7 @@ async def start_bot():
 
 
 async def start_admin():
-	config = uvicorn.Config(admin_app, host="192.168.1.59", port=8001, log_level="info", reload=False)
+	config = uvicorn.Config(admin_app, host="0.0.0.0", port=8001, log_level="info", reload=False)
 	server = uvicorn.Server(config)
 	await server.serve()
 

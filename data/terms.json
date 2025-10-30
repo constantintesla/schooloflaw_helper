@@ -1,0 +1,278 @@
+[
+  {
+    "ru": "Миграционная карта",
+    "en": "Migration Card",
+    "zh": "移民卡 (yímín kǎ)",
+    "ko": "이민 카드 (imin kadeu)"
+  },
+  {
+    "ru": "Паспорт",
+    "en": "Passport",
+    "zh": "护照 (hùzhào)",
+    "ko": "여권 (yeogwon)"
+  },
+  {
+    "ru": "Студенческая виза",
+    "en": "Student Visa",
+    "zh": "学生签证 (xuéshēng qiānzhèng)",
+    "ko": "유학 비자 (yuhak biza"
+  },
+  {
+    "ru": "Университет / ВУЗ",
+    "en": "University",
+    "zh": "大学 (dàxué)",
+    "ko": "대학교 (daehakgyo)"
+  },
+  {
+    "ru": "Международный отдел",
+    "en": "International Office",
+    "zh": "国际处 (guójì chù)",
+    "ko": "국제처 (gukjecheo)"
+  },
+  {
+    "ru": "Страховка / Медицинская страховка",
+    "en": "Health Insurance",
+    "zh": "医疗保险 (yīliáo bǎoxiǎn)",
+    "ko": "의료 보험 (uilyo boheom)"
+  },
+  {
+    "ru": "Договор аренды",
+    "en": "Rental Agreement / Lease",
+    "zh": "租赁合同 (zūlìn hétong)",
+    "ko": "임대 계약 (imdae gyeyak)"
+  },
+  {
+    "ru": "Депозит (залог за жильё)",
+    "en": "Security Deposit",
+    "zh": "押金 (yājīn)",
+    "ko": "보증금 (bojeunggeum)"
+  },
+  {
+    "ru": "Работа по совместительству",
+    "en": "Part-time Job",
+    "zh": "兼职工作 (jiānzhí gōngzuò)",
+    "ko": "아르바이트 (areubaiteu)"
+  },
+  {
+    "ru": "Налоги",
+    "en": "Taxes",
+    "zh": "税 (shuì)",
+    "ko": "세금 (segeum)"
+  },
+  {
+    "ru": "Полиция",
+    "en": "Police",
+    "zh": "警察 (jǐngchá)",
+    "ko": "경찰 (gyeongchal"
+  },
+  {
+    "ru": "Консульство",
+    "en": "Consulate",
+    "zh": "领事馆 (lǐngshìguǎn)",
+    "ko": "영사관 (yeongsagwan)"
+  },
+  {
+    "ru": "Юрист / Адвокат",
+    "en": "Lawyer",
+    "zh": "律师 (lǜshī)",
+    "ko": "변호사 (byeonhosa)"
+  },
+  {
+    "ru": "Права (юридические)",
+    "en": "Rights",
+    "zh": "权利 (quánlì)",
+    "ko": "권리 (gwonri)"
+  },
+  {
+    "ru": "Обязанности",
+    "en": "Obligations / Duties",
+    "zh": "义务 (yìwù)",
+    "ko": "의무 (uimu)"
+  },
+  {
+    "ru": "Штраф",
+    "en": "Fine",
+    "zh": "罚款 (fákuǎn)",
+    "ko": "벌금 (beolgeum)"
+  },
+  {
+    "ru": "Продление визы",
+    "en": "Visa Extension",
+    "zh": "签证延期 (qiānzhèng yánqī)",
+    "ko": "비자 연장 (bija yeonjang)"
+  },
+  {
+    "ru": "Академический отпуск",
+    "en": "Academic Leave",
+    "zh": "休学 (xiūxué)",
+    "ko": "휴학 (hyuhak)"
+  },
+  {
+    "ru": "Дискриминация",
+    "en": "Discrimination",
+    "zh": "歧视 (qíshì)",
+    "ko": "차별 (chabyeol)"
+  },
+  {
+    "ru": "Жалоба / Заявление",
+    "en": "Complaint",
+    "zh": "投诉 (tóusù)",
+    "ko": "불만 / 진정서 (bulman / jinjeongseo)"
+  },
+  {
+    "ru": "Официальный документ",
+    "en": "Official Document",
+    "zh": "官方文件 (guānfāng wénjiàn)",
+    "ko": "공식 문서 (gongsik munseo)"
+  },
+  {
+    "ru": "Подпись",
+    "en": "Signature",
+    "zh": "签名 (qiānmíng)",
+    "ko": "서명 (seomyeong)"
+  },
+  {
+    "ru": "Трудовой договор",
+    "en": "Employment Contract",
+    "zh": "劳动合同 (láodòng hétong)",
+    "ko": "고용 계약 (goyong gyeyak)"
+  },
+  {
+    "ru": "Минимальная зарплата",
+    "en": "Minimum Wage",
+    "zh": "最低工资 (zuìdī gōngzī)",
+    "ko": "최저 임금 (choejeo imgeum)"
+  },
+  {
+    "ru": "Социальное обеспечение",
+    "en": "Social Security",
+    "zh": "社会保障 (shèhuì bǎozhàng)",
+    "ko": "사회 보장 (sahoe bojang "
+  },
+  {
+    "ru": "Банковский счёт",
+    "en": "Bank Account",
+    "zh": "银行账户 (yínháng zhànghù)",
+    "ko": "은행 계좌 (eunhaeng gyejwa)"
+  },
+  {
+    "ru": "Налоговая декларация",
+    "en": "Tax Return",
+    "zh": "纳税申报 (nàshuì shēnbào)",
+    "ko": "세금 신고 (segeum singo)"
+  },
+  {
+    "ru": "Срок действия (документа)",
+    "en": "Validity Period",
+    "zh": "有效期 (yǒuxiào qī)",
+    "ko": "유효 기간 (yuhyo gigan)"
+  },
+  {
+    "ru": "Просрочка",
+    "en": "Overdue / Expiry",
+    "zh": "逾期 (yúqī)",
+    "ko": "기한 경과 (gihan gyeonggwa)"
+  },
+  {
+    "ru": "Апелляция",
+    "en": "Appeal",
+    "zh": "上诉 (shàngsù)",
+    "ko": "항소 (hangso)"
+  },
+  {
+    "ru": "Свидетельство",
+    "en": "Certificate",
+    "zh": "证明 (zhèngmíng)",
+    "ko": "증명서 (jeungmyeongseo)"
+  },
+  {
+    "ru": "Справка из университета",
+    "en": "University Certificate / Letter",
+    "zh": "在读证明 (zàidú zhèngmíng)",
+    "ko": "재학 증명서 (jaehak jeungmyeongseo)"
+  },
+  {
+    "ru": "Выпускной диплом",
+    "en": "Diploma",
+    "zh": "毕业证书 (bìyè zhèngshū)",
+    "ko": "졸업 증서 (joreop jeungseo)"
+  },
+  {
+    "ru": "Право на работу",
+    "en": "Right to Work",
+    "zh": "工作权 (gōngzuò quán)",
+    "ko": "일할 권리 (ilhal gwonri)"
+  },
+  {
+    "ru": "Дискриминация по признаку...",
+    "en": "Discrimination based on...",
+    "zh": "基于…的歧视 (jīyú… de qíshì)",
+    "ko": "…에 의한 차별 (…e uihan chabyeol)"
+  },
+  {
+    "ru": "Психологическая помощь",
+    "en": "Psychological Support",
+    "zh": "心理咨询 (xīnlǐ zīxún)",
+    "ko": "심리 상담 (simri sangdam)"
+  },
+  {
+    "ru": "Экстренная помощь",
+    "en": "Emergency Assistance",
+    "zh": "紧急援助 (jǐnjí yuánzhù)",
+    "ko": "긴급 지원 (gingeup jiwon)"
+  },
+  {
+    "ru": "Горячая линия",
+    "en": "Hotline",
+    "zh": "热线 (rèxiàn)",
+    "ko": "핫라인 (hattan) / 상담 전화 (sangdam jeonhwa)"
+  },
+  {
+    "ru": "Официальный сайт",
+    "en": "Official Website",
+    "zh": "官方网站 (guānfāng wǎngzhàn)",
+    "ko": "공식 웹사이트 (gongsik wepsaiteu)"
+  },
+  {
+    "ru": "Заявление на продление",
+    "en": "Extension Application",
+    "zh": "延期申请 (yánqī shēnqǐng)",
+    "ko": "연장 신청 (yeonjang sincheong)"
+  },
+  {
+    "ru": "Нарушение правил",
+    "en": "Violation of Rules",
+    "zh": "违反规定 (wéifǎn guīdìng)",
+    "ko": "규정 위반 (gyujeok wiban)"
+  },
+  {
+    "ru": "Предупреждение",
+    "en": "Warning",
+    "zh": "警告 (jǐnggào)",
+    "ko": "경고 (gyeongo)"
+  },
+  {
+    "ru": "Доверенность",
+    "en": "Power of Attorney",
+    "zh": "授权书 (shòuquán shū)",
+    "ko": "위임장 (wimimjang)"
+  },
+  {
+    "ru": "Личные данные",
+    "en": "Personal Data",
+    "zh": "个人资料 (gèrén zīliào)",
+    "ko": "개인정보 (gein jeongbo)"
+  },
+  {
+    "ru": "Конфиденциальность",
+    "en": "Confidentiality",
+    "zh": "保密 (bǎomì)",
+    "ko": "기밀 유지 (gimil yuji)"
+  },
+  {
+    "ru": "Права потребителя",
+    "en": "Consumer Rights",
+    "zh": "消费者权益 (xiāofèizhě quányì)",
+    "ko": "소비자 권리 (sobija gwonri)"
+  }
+]

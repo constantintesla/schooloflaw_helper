@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{% block title %}Админ-панель{% endblock %}</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		:root {
+			--primary:#2563eb; /* blue-600 */
+			--primary-hover:#1d4ed8; /* blue-700 */
+			--danger:#dc2626; /* red-600 */
+			--danger-hover:#b91c1c; /* red-700 */
+		}
+		.table th, .table td { padding: 0.5rem 0.75rem; vertical-align: top; }
+		.badge { font-size: .75rem; padding:.125rem .5rem; border-radius:.375rem; background:#f3f4f6; }
+		.input {
+			appearance:none; width:100%; padding:.6rem .85rem; border:2px solid #e5e7eb; border-radius:.6rem; background:#fff; 
+			box-shadow: 0 1px 2px rgba(0,0,0,.03);
+			transition: border-color .15s, box-shadow .15s, background .15s;
+		}
+		.input:hover { border-color:#cbd5e1; }
+		.input:focus { outline:none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37,99,235,.15); background:#fff; }
+		.btn { display:inline-flex; align-items:center; gap:.375rem; padding:.55rem .9rem; border-radius:.6rem; border:2px solid transparent; font-weight:600; transition: background .15s, color .15s, border-color .15s, box-shadow .15s; }
+		.btn-primary { background: var(--primary); color:#fff; }
+		.btn-primary:hover { background: var(--primary-hover); }
+		.btn-danger { color: var(--danger); border-color: var(--danger); background:#fff; }
+		.btn-danger:hover { color:#fff; background: var(--danger-hover); border-color: var(--danger-hover); }
+		.card { background:#fff; border-radius:1rem; box-shadow:0 1px 2px rgba(0,0,0,.04), 0 1px 1px rgba(0,0,0,.02); border:1px solid #eef2f7; }
+		/* таблица: inputs в ячейках чуть компактнее на больших экранах */
+		@media (min-width: 640px){
+			.table .input { padding:.5rem .7rem; }
+		}
+	</style>
+</head>
+<body class="bg-gradient-to-b from-gray-50 to-white min-h-screen">
+	<header class="border-b bg-white/70 backdrop-blur sticky top-0 z-10">
+		<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+			<div class="flex items-center gap-3">
+				<div class="w-8 h-8 rounded-lg bg-blue-600"></div>
+				<h1 class="font-semibold">LawHelp Admin</h1>
+			</div>
+			<nav class="text-sm text-gray-600">
+				<a href="/admin" class="hover:text-gray-900">Главная</a>
+			</nav>
+		</div>
+	</header>
+	<main class="max-w-7xl mx-auto px-6 py-6">
+		{% block content %}{% endblock %}
+	</main>
+	<footer class="py-8 text-center text-xs text-gray-500">© {{ 2025 }} LawHelp</footer>
+</body>
+</html>

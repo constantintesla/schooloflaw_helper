@@ -1,0 +1,14 @@
+[
+  {
+    "ru": "Медицинская справка об отсутствии опасных инфекций (туберкулёз, сифилис и др.)",
+    "en": "Medical certificate confirming absence of dangerous infectious diseases (e.g., tuberculosis, syphilis)",
+    "zh": "无危险传染病（如肺结核、梅毒等）医学证明",
+    "ko": "결핵, 매독 등 위험 전염병이 없음을 증명하는 건강 진단서 "
+  },
+  {
+    "ru": "Подтверждение зачисления в вуз (письмо от университета или приказ о зачислении)",
+    "en": "Proof of university enrollment (admission letter or enrollment order from the university)",
+    "zh": "大学录取通知书或注册证明",
+    "ko": "대학 입학 허가서 또는 등록 확인서 "
+  }
+]

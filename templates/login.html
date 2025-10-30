@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Вход · Админ{% endblock %}
+{% block content %}
+<div class="min-h-[70vh] flex items-center justify-center">
+	<div class="card p-8 w-full max-w-md">
+		<h2 class="text-xl font-semibold mb-6">Вход в админ-панель</h2>
+		{% if error %}
+		<div class="mb-4 text-sm text-red-700 bg-red-50 border border-red-200 rounded p-3">{{ error }}</div>
+		{% endif %}
+		<form method="post" class="space-y-4">
+			<label class="block">
+				<span class="text-sm text-gray-700">Логин</span>
+				<input name="username" type="text" class="input mt-1" required />
+			</label>
+			<label class="block">
+				<span class="text-sm text-gray-700">Пароль</span>
+				<input name="password" type="password" class="input mt-1" required />
+			</label>
+			<button class="btn btn-primary w-full">Войти</button>
+		</form>
+	</div>
+</div>
+{% endblock %}

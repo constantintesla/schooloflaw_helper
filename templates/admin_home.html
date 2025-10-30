@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% block title %}Админ-панель{% endblock %}
+{% block content %}
+<div class="flex items-center justify-between mb-6">
+	<h1 class="text-2xl font-bold">Админ-панель</h1>
+	<div class="text-sm text-gray-600">Пользователь: <b>{{ user.username }}</b> <span class="badge">{{ user.role }}</span> · <a href="/admin/logout" class="text-blue-600 hover:text-blue-700">Выход</a></div>
+</div>
+
+{% if user.role == 'admin' %}
+<section class="card p-5 mb-6">
+	<h2 class="text-lg font-semibold mb-4">Пользователи</h2>
+	<form method="post" action="/admin/users/create" class="grid grid-cols-1 gap-3 mb-3">
+		<input name="username" placeholder="username" class="input" required />
+		<input name="password" placeholder="password" type="password" class="input" required />
+		<select name="role" class="input">
+			<option value="editor">editor</option>
+			<option value="admin">admin</option>
+		</select>
+		<button class="btn btn-primary">Создать</button>
+	</form>
+	<div class="text-xs text-gray-500">Список пользователей скрыт в этом варианте UI — управление через формы.</div>
+</section>
+{% endif %}
+
+<!-- Советы (первым блоком) -->
+<section class="card p-5 mb-6">
+	<h2 class="text-lg font-semibold mb-4">Советы</h2>
+	<form method="post" action="/admin/tips/create" class="grid grid-cols-1 gap-2 mb-4">
+		<input name="ru" placeholder="ru" class="input" required />
+		<input name="en" placeholder="en" class="input" />
+		<input name="zh" placeholder="zh" class="input" />
+		<input name="ko" placeholder="ko" class="input" />
+		<button class="btn btn-primary">Добавить</button>
+	</form>
+	<div class="overflow-x-auto">
+	<table class="table w-full text-sm">
+		<thead class="text-gray-500"><tr><th>ru</th><th>en</th><th>zh</th><th>ko</th><th class="w-48"></th></tr></thead>
+		<tbody>
+			{% for item in tips %}
+			<tr class="border-t">
+				<form method="post" action="/admin/tips/update/{{ loop.index0 }}" class="contents">
+					<td><input name="ru" value="{{ item.ru }}" class="input" /></td>
+					<td><input name="en" value="{{ item.en }}" class="input" /></td>
+					<td><input name="zh" value="{{ item.zh }}" class="input" /></td>
+					<td><input name="ko" value="{{ item.ko }}" class="input" /></td>
+					<td class="whitespace-nowrap flex gap-3 items-center">
+						<button class="btn text-blue-600">Сохранить</button>
+				</form>
+				<form method="post" action="/admin/tips/delete/{{ loop.index0 }}" class="inline">
+					<button class="btn btn-danger">Удалить</button>
+				</form>
+					</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</div>
+</section>
+
+<!-- Словарь (вторым блоком, под советами) -->
+<section class="card p-5 mb-6">
+	<h2 class="text-lg font-semibold mb-4">Словарь терминов</h2>
+	<form method="post" action="/admin/terms/create" class="grid grid-cols-1 gap-2 mb-4">
+		<input name="ru" placeholder="ru" class="input" required />
+		<input name="en" placeholder="en" class="input" />
+		<input name="zh" placeholder="zh" class="input" />
+		<input name="ko" placeholder="ko" class="input" />
+		<button class="btn btn-primary">Добавить</button>
+	</form>
+	<div class="overflow-x-auto">
+	<table class="table w-full text-sm">
+		<thead class="text-gray-500"><tr><th>ru</th><th>en</th><th>zh</th><th>ko</th><th class="w-48"></th></tr></thead>
+		<tbody>
+			{% for item in terms %}
+			<tr class="border-t">
+				<form method="post" action="/admin/terms/update/{{ loop.index0 }}" class="contents">
+					<td><input name="ru" value="{{ item.ru }}" class="input" /></td>
+					<td><input name="en" value="{{ item.en }}" class="input" /></td>
+					<td><input name="zh" value="{{ item.zh }}" class="input" /></td>
+					<td><input name="ko" value="{{ item.ko }}" class="input" /></td>
+					<td class="whitespace-nowrap flex gap-3 items-center">
+						<button class="btn text-blue-600">Сохранить</button>
+				</form>
+				<form method="post" action="/admin/terms/delete/{{ loop.index0 }}" class="inline">
+					<button class="btn btn-danger">Удалить</button>
+				</form>
+					</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</div>
+</section>
+
+<!-- Документы -->
+<section class="card p-5 mb-6">
+	<h2 class="text-lg font-semibold mb-4">Документы</h2>
+	<form method="post" action="/admin/docs/create" class="grid grid-cols-1 gap-2 mb-4">
+		<input name="ru" placeholder="ru" class="input" required />
+		<input name="en" placeholder="en" class="input" />
+		<input name="zh" placeholder="zh" class="input" />
+		<input name="ko" placeholder="ко" class="input" />
+		<button class="btn btn-primary">Добавить</button>
+	</form>
+	<div class="overflow-x-auto">
+	<table class="table w-full text-sm">
+		<thead class="text-gray-500"><tr><th>ru</th><th>en</th><th>zh</th><th>ko</th><th class="w-48"></th></tr></thead>
+		<tbody>
+			{% for item in docs %}
+			<tr class="border-t">
+				<form method="post" action="/admin/docs/update/{{ loop.index0 }}" class="contents">
+					<td><input name="ru" value="{{ item.ru }}" class="input" /></td>
+					<td><input name="en" value="{{ item.en }}" class="input" /></td>
+					<td><input name="zh" value="{{ item.zh }}" class="input" /></td>
+					<td><input name="ko" value="{{ item.ko }}" class="input" /></td>
+					<td class="whitespace-nowrap flex gap-3 items-center">
+						<button class="btn text-blue-600">Сохранить</button>
+				</form>
+				<form method="post" action="/admin/docs/delete/{{ loop.index0 }}" class="inline">
+					<button class="btn btn-danger">Удалить</button>
+				</form>
+					</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</div>
+</section>
+
+<!-- Карточки -->
+<section class="card p-5 mb-6">
+	<h2 class="text-lg font-semibold mb-4">Кодекс мнемоники — карточки</h2>
+	<form method="post" action="/admin/cards/upload" enctype="multipart/form-data" class="flex flex-wrap items-center gap-3 mb-4">
+		<input type="file" name="file" class="input" required />
+		<button class="btn btn-primary">Загрузить</button>
+	</form>
+	<div class="overflow-x-auto">
+	<table class="table w-full text-sm">
+		<thead class="text-gray-500"><tr><th>Файл</th><th>ru</th><th>en</th><th>zh</th><th>ko</th><th class="w-48"></th></tr></thead>
+		<tbody>
+			{% for c in cards %}
+			<tr class="border-t">
+				<form method="post" action="/admin/cards/update/{{ loop.index0 }}" class="contents">
+					<td class="align-middle">{{ c.file }}</td>
+					<td><input name="ru" value="{{ c.ru }}" class="input" /></td>
+					<td><input name="en" value="{{ c.en }}" class="input" /></td>
+					<td><input name="zh" value="{{ c.zh }}" class="input" /></td>
+					<td><input name="ko" value="{{ c.ko }}" class="input" /></td>
+					<td class="whitespace-nowrap flex gap-3 items-center">
+						<button class="btn text-blue-600">Сохранить</button>
+				</form>
+				<form method="post" action="/admin/cards/delete/{{ loop.index0 }}" class="inline">
+					<button class="btn btn-danger">Удалить</button>
+				</form>
+					</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	</div>
+</section>
+
+<!-- Логи -->
+<section class="card p-5">
+	<h2 class="text-lg font-semibold mb-4">Журнал действий (последние)</h2>
+	<div class="text-sm space-y-1 max-h-64 overflow-auto">
+		{% for l in logs|reverse %}
+		<div>
+			<span class="text-gray-500">{{ l.ts }}</span> · <b>{{ l.actor }}</b> · {{ l.action }} · <span class="text-gray-600">{{ l.details }}</span>
+		</div>
+		{% endfor %}
+	</div>
+</section>
+{% endblock %}
